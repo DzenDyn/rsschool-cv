@@ -8,6 +8,7 @@
 * **Telegram:** [@DzenDyn](https://t.me/dzendyn) 
 * **GitHub:** [@DzenDyn](https://github.com/dzendyn)
 * **Habr:** [@urbanrider](https://habr.com/ru/users/urbanrider/)  
+  
 ---
 
 ## *About Me*
@@ -75,6 +76,7 @@ function nbYear(p0, percent, aug, p) {
 REST API endpoint returns optionally filtered paginated data from MongoDB with Mongoose. 
 <details>
 <summary>JavaScript long code function</summary>
+  
 
 ```javascript
 export function getTariffication(req, res) {
@@ -138,6 +140,8 @@ export function getTariffication(req, res) {
         });
 }
 ```
+
+
 </details>
 ---
 ## *Courses*
