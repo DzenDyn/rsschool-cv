@@ -74,6 +74,9 @@ function nbYear(p0, percent, aug, p) {
 
 ### *Get data from MongoDB with Mongoose*
 REST API endpoint returns optionally filtered paginated data from MongoDB with Mongoose. 
+<details>
+<summary>JavaScript long code function</summary>
+  
 
 ```javascript
 
@@ -82,12 +85,7 @@ export function getTariffication(req, res) {
         column,
         order,
         current = 1,
-        pageSize = 1,
-        dateStart,
-        dateEnd,
-        subscriber,
-        external,
-        direction,
+        // ...
         searchExactSubscriber,
         searchExactExternal
     } = req.query;
@@ -103,11 +101,7 @@ export function getTariffication(req, res) {
                 ...(dateStart && { $gte: dateStart }),
                 ...(dateEnd && { $lt: dateEnd })
             }
-        }),
-        ...(external && {
-            external: searchExactExternal ? external : { $regex: external, $options: 'i' }
-        }),
-        ...(direction && { direction })
+        // ...
     };
 
     TarifficationRecord.find(filter)
@@ -120,26 +114,19 @@ export function getTariffication(req, res) {
         .skip((pageNumber - 1) * limit)
         .then(async (records) => {
             const count = await TarifficationRecord.countDocuments(filter);
-            res.json({
-                resultCode: 0,
-                records,
-                pagination: {
-                    currentPage: pageNumber,
-                    total: count,
-                    totalPages: Math.ceil(count / limit)
-                }
+            res.json(
+                // result
             });
         })
         .catch((err) => {
-            res.json({
-                resultCode: 1,
-                message: err.message
-            });
+            // error
         });
 }
 
 ```
 
+
+</details>
 ---
 ## *Courses*
 [JS Manual](https://learn.javascript.ru)  
