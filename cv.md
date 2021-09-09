@@ -139,6 +139,6 @@ export function getTariffication(req, res) {
 * Huawei FusionCube
 
 ## *Languages*
-* English – Upper-intermediate/Advanced, but get C2 proficient on ![EFSET](/img/efset-logo.png):
+* English – Upper-intermediate/Advanced, but got C2 proficient on ![EFSET](/img/efset-logo.png):
 ![EFSET LEVEL 71 C2](/img/eng_lvl.png)
 * Russian – Native
