@@ -1,1 +1,1 @@
-# rsschool-cv
+https://dzendyn.github.io/rsschool-cv/cv
