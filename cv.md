@@ -115,7 +115,7 @@ export function getTariffication(req, res) {
         .then(async (records) => {
             const count = await TarifficationRecord.countDocuments(filter);
             res.json(
-                // result
+                // return result 
             });
         })
         .catch((err) => {
