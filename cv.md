@@ -56,3 +56,83 @@ Skills and Proficiency:
 * VSCode, WebStorm
 
 ---
+## *Code Example*
+### Growth of a Population KATA from Codewars
+In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
+
+My solution:
+```javascript
+function nbYear(p0, percent, aug, p) {
+  let population = p0 + p0*(percent/100)+aug;
+  let years =1;
+  if(population >= p) return years;
+  return years + nbYear(population, percent, aug, p);
+}
+```
+
+### Get data from MongoDB with Mongoose
+REST API endpoint returns optionally filtered paginated data from MongoDB with Mongoose. 
+```javascript
+export function getTariffication(req, res) {
+    const {
+        column,
+        order,
+        current = 1,
+        pageSize = 1,
+        dateStart,
+        dateEnd,
+        subscriber,
+        external,
+        direction,
+        searchExactSubscriber,
+        searchExactExternal
+    } = req.query;
+    const pageNumber = +current;
+    const limit = +pageSize;
+
+    const filter = {
+        ...(subscriber && {
+            subscriber: searchExactSubscriber ? subscriber : { $regex: subscriber, $options: 'i' }
+        }),
+        ...((dateStart || dateEnd) && {
+            dateTime: {
+                ...(dateStart && { $gte: dateStart }),
+                ...(dateEnd && { $lt: dateEnd })
+            }
+        }),
+        ...(external && {
+            external: searchExactExternal ? external : { $regex: external, $options: 'i' }
+        }),
+        ...(direction && { direction })
+    };
+
+    TarifficationRecord.find(filter)
+        .sort({
+            ...(order === 'ascend' && { [String(column)]: 1 }),
+            ...(order === 'descend' && { [String(column)]: -1 })
+        })
+        .collation({ locale: 'en_US', numericOrdering: true })
+        .limit(limit)
+        .skip((pageNumber - 1) * limit)
+        .then(async (records) => {
+            const count = await TarifficationRecord.countDocuments(filter);
+            res.json({
+                resultCode: 0,
+                records,
+                pagination: {
+                    currentPage: pageNumber,
+                    total: count,
+                    totalPages: Math.ceil(count / limit)
+                }
+            });
+        })
+        .catch((err) => {
+            res.json({
+                resultCode: 1,
+                message: err.message
+            });
+        });
+}
+```
+
+---
