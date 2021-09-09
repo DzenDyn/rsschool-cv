@@ -79,6 +79,7 @@ REST API endpoint returns optionally filtered paginated data from MongoDB with M
   
 
 ```javascript
+
 export function getTariffication(req, res) {
     const {
         column,
@@ -139,6 +140,7 @@ export function getTariffication(req, res) {
             });
         });
 }
+
 ```
 
 
