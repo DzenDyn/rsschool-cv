@@ -74,9 +74,6 @@ function nbYear(p0, percent, aug, p) {
 
 ### *Get data from MongoDB with Mongoose*
 REST API endpoint returns optionally filtered paginated data from MongoDB with Mongoose. 
-<details>
-<summary>JavaScript long code function</summary>
-  
 
 ```javascript
 
@@ -143,8 +140,6 @@ export function getTariffication(req, res) {
 
 ```
 
-
-</details>
 ---
 ## *Courses*
 [JS Manual](https://learn.javascript.ru)  
