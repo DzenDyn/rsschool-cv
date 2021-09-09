@@ -30,8 +30,29 @@ In the Backend, I worked with:
 In Frontend, I worked with:
 * React and React Hooks
 * Redux
+* Axios
 * AntDesign
+* CSS modules
 
 Now I want to systematize and deepen my knowledge in the direction of Frontend developer.
+
+---
+
+Skills and Proficiency:
+* Javascript
+* NodeJS
+* Express
+* NestJS
+* Mongoose
+* TypeORM
+* MongoDB
+* PostgreSQL
+* React Basics
+* Redux Basics
+* Postman
+* Docker and docker-compose
+* HTML5 and CSS3 Basics
+* Git, GitHub, Gitlab
+* VSCode, WebStorm
 
 ---
