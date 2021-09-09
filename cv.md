@@ -7,6 +7,7 @@
 * **Email:** evgeniy.v.nikiforov@gmail.com
 * **Telegram:** [@DzenDyn](https://t.me/dzendyn) 
 * **GitHub:** [@DzenDyn](https://github.com/dzendyn)
+* **Habr** [@urbanrider](https://habr.com/ru/users/urbanrider/)
 ---
 
 ## *About Me*
@@ -57,7 +58,7 @@ Skills and Proficiency:
 
 ---
 ## *Code Example*
-### Growth of a Population KATA from Codewars
+### *Growth of a Population KATA from Codewars*
 In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
 
 My solution:
@@ -70,8 +71,11 @@ function nbYear(p0, percent, aug, p) {
 }
 ```
 
-### Get data from MongoDB with Mongoose
+### *Get data from MongoDB with Mongoose*
 REST API endpoint returns optionally filtered paginated data from MongoDB with Mongoose. 
+<details>
+<summary>JavaScript long code function</summary>
+
 ```javascript
 export function getTariffication(req, res) {
     const {
@@ -134,5 +138,23 @@ export function getTariffication(req, res) {
         });
 }
 ```
-
+</details>
 ---
+## *Courses*
+[JS Manual](https://learn.javascript.ru)  
+[React Docs](https://ru.reactjs.org/docs/)  
+[Nest Docs](https://docs.nestjs.com/)  
+[Linux Course](https://www.netacad.com/ru/courses/os-it/ndg-linux-essentials)  
+[«Vladilen Minin» Youtube channel](https://www.youtube.com/c/VladilenMinin)
+
+### *Certificates*
+* Microsoft M6425
+* Microsoft M6426
+* Cisco CCNAX
+* NDG Linux Essentials
+* Huawei FusionCube
+
+## *Languages*
+* English – Upper-intermediate/Advanced, but get C2 proficient on ![EFSET](/img/efset-logo.png):
+![EFSET LEVEL 71 C2](/img/eng_lvl.png)
+* Russian – Native
