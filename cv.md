@@ -7,7 +7,7 @@
 * **Email:** evgeniy.v.nikiforov@gmail.com
 * **Telegram:** [@DzenDyn](https://t.me/dzendyn) 
 * **GitHub:** [@DzenDyn](https://github.com/dzendyn)
-* **Habr** [@urbanrider](https://habr.com/ru/users/urbanrider/)
+* **Habr:** [@urbanrider](https://habr.com/ru/users/urbanrider/)  
 ---
 
 ## *About Me*
