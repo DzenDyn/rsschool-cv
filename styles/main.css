@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Ubuntu&display=swap');
 
-@media screen and (min-width: 1050px){
+@media screen and (min-width: 1300px){
   main:after {
     content: "";
     display: table;
@@ -206,13 +206,7 @@ a.backToTop {
   bottom: 80px;
   line-height: 50px;
   right: 50px;
-
-}
-a.backToTop::before {
   color: #38362D;
-}
-a.backToTop:link {
-  text-decoration: none;
 }
 
 @media only screen and (min-width: 1050px) {
