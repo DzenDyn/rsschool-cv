@@ -14,7 +14,7 @@
 <body>
 <div class="container">
   <main>
-    <header>
+    <header id="top">
       <h1 class="name">Evgeny Nikiforov</h1>
       <hr class="rank">
       <div class="rank">Junior Frontend Developer</div>
@@ -24,6 +24,19 @@
         <figure>
           <img src="img/photo.jpg" alt="Photo of Evgeny Nikiforov" class="photo">
         </figure>
+      </section>
+      <section id="navigation" class="menu-wrap">
+        <nav class="menu">
+          <label for="hamburger">&#9776;</label>
+          <input type="checkbox" id="hamburger"/>
+          <ul id="hamitems">
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education" >Education</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#code">Code examples</a></li>
+          </ul>
+        </nav>
       </section>
       <section id="contacts">
         <h2>Contacts</h2>
@@ -62,7 +75,7 @@
       </section>
     </aside>
     <section class="content">
-      <article>
+      <article id="aboutme">
         <h2>About Me</h2>
         <hr class="article">
         <p>I started coding back in elementary school. The first language was Basiс and then Pascal. A few years later I started making the first sites using HTML. Then I learned PHP and started making websites a little more complex. However, the main area of work and direction of training for me was system administration, and programming has remained my hobby.</p>
@@ -71,7 +84,7 @@
 
         <p>During the pandemic, I had more free time and began to develop as a programmer and learn JS. I chose the Frontend direction, but also studied the Backend to get a general idea.</p>
       </article>
-      <section class="certAndCourse">
+      <section id="education">
         <h2>Education</h2>
         <hr class="article">
         <article class="courses">
@@ -96,7 +109,7 @@
           </ul>
         </article>
       </section>
-      <article>
+      <article id="code">
         <h2>Code Example</h2>
         <hr class="article">
         <h3>Growth of a Population KATA from Codewars</h3>
@@ -122,6 +135,9 @@ function nbYear(p0, percent, aug, p) {
       <p class="footer last"><a href="https://rs.school/js/"><img src="img/rs_school_js.svg" alt="RS School" class="footer-img"></a></p>
     </footer>
   </main>
+
 </div>
+<a href="#top" class="backToTop"><i class="fas fa-chevron-up"></i></a>
+<script src="scripts/backToTop.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Ubuntu&display=swap');
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1050px){
   main:after {
     content: "";
     display: table;
@@ -28,13 +28,16 @@
     width: 50% !important;
   }
 
+
+
 }
 
 html {
   background-color: #857B42;
   font-family: 'Ubuntu', sans-serif;
   color: #38362D;
-  font-size: 1.1em;
+
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3 {
@@ -150,4 +153,75 @@ a.footer {
   line-height: 2.1em;
 }
 
+#photo {
+  text-align: center;
+}
 
+#navigation {
+
+}
+
+nav ul{
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+#hamitems a {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 10px;
+  text-decoration: none;
+  text-align: left;
+}
+
+.menu label, #hamburger { display: none; }
+
+
+@media screen and (max-width: 1050px){
+  #hamitems a {
+    box-sizing: border-box;
+    display: block;
+  }
+  .menu label {
+    cursor: pointer;
+    display: inline-block;
+    color: black;
+    font-style: normal;
+    font-size: 3em;
+
+  }
+
+  #hamitems { display: none; }
+  .menu input:checked ~ #hamitems { display: block; }
+}
+
+a.backToTop {
+  position: fixed;
+  text-align: center;
+  transform: translateX(120px);
+  transition: 1s all;
+  z-index: 9999;
+  font-size: 1.5em;
+  bottom: 80px;
+  line-height: 50px;
+  right: 50px;
+
+}
+a.backToTop::before {
+  color: #38362D;
+}
+a.backToTop:link {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 1050px) {
+  a.backToTop {
+    font-size: 3em;
+    bottom: 30px;
+    height: 50px;
+    line-height: 50px;
+    right: 30px;
+    width: 50px;
+  }
+}
