@@ -3,42 +3,125 @@
 <head>
   <meta charset="UTF-8">
   <title>Evgeny Nikiforov</title>
-  <link rel="stylesheet" href="./styles/main.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" rel="stylesheet">
+  <link rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="styles/code.css">
+  <script>hljs.highlightAll();</script>
 </head>
 <body>
-  <div class="container">
+<div class="container">
+  <main>
     <header>
-      <h1>Evgeny Nikiforov – Junior Frontend Developer</h1>
+      <h1 class="name">Evgeny Nikiforov</h1>
+      <hr class="rank">
+      <div class="rank">Junior Frontend Developer</div>
     </header>
     <aside>
       <section id="photo">
         <figure>
-          <img src="" alt="Photo of Evgeny Nikiforov">
+          <img src="img/photo.jpg" alt="Photo of Evgeny Nikiforov" class="photo">
         </figure>
       </section>
       <section id="contacts">
         <h2>Contacts</h2>
+        <hr class="aside">
+        <ul class="no-bullets">
+          <li><i class="fas fa-home big-icons"></i>&nbsp;Sochi, Russia</li>
+          <li><i class="fas fa-phone big-icons"></i>&nbsp;<a href="tel:+79897567999">+7 (989) 756-79-99</a></li>
+          <li><i class="fas fa-envelope big-icons"></i>&nbsp;<a href="mailto:evgeniy.v.nikiforov@gmail.com">evgeniy.v.nikiforov@gmail.com</a></li>
+          <li><i class="fab fa-telegram big-icons"></i>&nbsp;<a href="https://t.me/dzendyn">Telegram</a></li>
+          <li><i class="fas fa-link big-icons"></i>&nbsp;<a href="https://habr.com/ru/users/urbanrider/">Habr.com</a></li>
+        </ul>
       </section>
       <section id="skills">
         <h2>Skills</h2>
+        <hr class="aside">
         <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li>Javascript</li>
+          <li>NodeJS (Express / Nest)</li>
+          <li>MongoDB / MySQL / PostgreSQL</li>
+          <li>React & Redux Basics</li>
+          <li>Docker & docker-compose</li>
+          <li>HTML5 and CSS3</li>
+          <li>Git, GitHub, Gitlab</li>
+          <li>TypeORM</li>
+          <li>Postman</li>
+          <li>WebStorm, VSCode</li>
         </ul>
       </section>
       <section id="languages">
         <h2>Languages</h2>
+        <hr class="aside">
+        <ul>
+          <li>English – Upper-intermediate+/Advanced.<br> C2 proficient (71/100) on <a href="https://www.efset.org/cert/WGP6Xw"><b>EF SET</b></a></li>
+          <li>Russian - native</li>
+        </ul>
       </section>
     </aside>
-    <main>
-      main
-    </main>
+    <section class="content">
+      <article>
+        <h2>About Me</h2>
+        <hr class="article">
+        <p>I started coding back in elementary school. The first language was Basiс and then Pascal. A few years later I started making the first sites using HTML. Then I learned PHP and started making websites a little more complex. However, the main area of work and direction of training for me was system administration, and programming has remained my hobby.</p>
+
+        <p>Over the past 12 years, I have developed as a system administrator and network engineer applying my C# and Python programming skills to automate routine tasks. I wrote a simple OpenSource utility to update DNS records in CloudFlare <a href="https://github.com/DzenDyn/zen-cf-ddns">zen-cf-ddns</a>.</p>
+
+        <p>During the pandemic, I had more free time and began to develop as a programmer and learn JS. I chose the Frontend direction, but also studied the Backend to get a general idea.</p>
+      </article>
+      <section class="certAndCourse">
+        <h2>Education</h2>
+        <hr class="article">
+        <article class="courses">
+          <p><a href="https://rguts.ru/en/about/index">Russian State University of Tourism and Service (information systems and technologies)</a> </p>
+          <h3>Courses</h3>
+          <ul>
+            <li>JS Manual</li>
+            <li>React Docs</li>
+            <li>Nest Docs</li>
+            <li>Linux Course</li>
+            <li>«Vladilen Minin» Youtube channel</li>
+          </ul>
+        </article>
+        <article class="certificates">
+          <h3>Certificates</h3>
+          <ul>
+            <li>Microsoft M6425</li>
+            <li>Microsoft M6426</li>
+            <li>Cisco CCNAX</li>
+            <li>NDG Linux Essentials</li>
+            <li>Huawei FusionCube</li>
+          </ul>
+        </article>
+      </section>
+      <article>
+        <h2>Code Example</h2>
+        <hr class="article">
+        <h3>Growth of a Population KATA from Codewars</h3>
+        <p>
+          In a small town the population is p0 = 1000 at the beginning of a year. The population regularly increases by 2 percent per year and moreover 50 new inhabitants per year come to live in the town. How many years does the town need to see its population greater or equal to p = 1200 inhabitants?
+        </p>
+        <p>My solution:</p>
+        <pre>
+          <code>
+function nbYear(p0, percent, aug, p) {
+    let population = p0 + p0*(percent/100)+aug;
+    let years =1;
+    if(population >= p) return years;
+    return years + nbYear(population, percent, aug, p);
+}
+          </code>
+        </pre>
+      </article>
+    </section>
     <footer>
-      Footer
+      <p class="footer"><i class="fab fa-github big-icons"></i>&nbsp;<a href="https://github.com/dzendyn" class="footer">Visit my GitHub</a></p>
+      <p class="footer">&copy; 2021</p>
+      <p class="footer last"><a href="https://rs.school/js/"><img src="img/rs_school_js.svg" alt="RS School" class="footer-img"></a></p>
     </footer>
-  </div>
+  </main>
+</div>
 </body>
 </html>
